@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -328,4 +329,336 @@
 
     <script src="app.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Fundación FUNJOVIR</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="Img/Logo/Logo.png" alt="Logo Fundación FUNJOVIR" class="logo-img" onerror="this.src='https://via.placeholder.com/60?text=FUNJOVIR'">
+                <div class="logo-text">
+                    <h1>Fundación FUNJOVIR</h1>
+                    <p>Transformando vidas desde 2015</p>
+                </div>
+            </div>
+            <button class="btn-donate-header" onclick="navigateTo('donaciones')">❤️ DONAR AHORA</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a data-page="home" class="nav-link active">Inicio</a></li>
+                <li><a data-page="nosotros" class="nav-link">Nosotros</a></li>
+                <li><a data-page="programas" class="nav-link">Programas</a></li>
+                <li><a data-page="voluntariado" class="nav-link">Voluntariado</a></li>
+                <li><a data-page="blog" class="nav-link">Blog</a></li>
+                <li><a data-page="donaciones" class="nav-link">Donaciones</a></li>
+                <li><a data-page="esal" class="nav-link">ESAL</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">👥 Administrativo</a>
+                    <div class="dropdown-content">
+                        <a onclick="showAdminDirectivos()">Directivos</a>
+                        <a onclick="showAdminMetricas()">Métricas de la Página</a>
+                        <a onclick="showAdminGestiones()">Gestiones Junta Directiva</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">♿ Accesibilidad</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleNarrador()">📢 Narrador</a>
+                        <a onclick="changeFontSize('increase')">🔍 Aumentar texto</a>
+                        <a onclick="changeFontSize('decrease')">🔍 Disminuir texto</a>
+                        <a onclick="changeSpacing('increase')">📏 Aumentar espaciado</a>
+                        <a onclick="changeSpacing('decrease')">📏 Disminuir espaciado</a>
+                        <a onclick="toggleGrayscale()">⚫ Escala de grises</a>
+                        <a onclick="toggleHighContrast()">🌓 Alto contraste</a>
+                        <a onclick="toggleDyslexicFont()">📖 Fuente disléxicos</a>
+                        <a onclick="toggleLargeCursor()">🖱️ Aumentar cursor</a>
+                        <a onclick="selectLanguage()">🌐 Seleccionar Idioma</a>
+                        <a onclick="toggleHighlightLinks()">🔗 Resaltar enlaces</a>
+                        <a onclick="resetAccessibility()">🔄 Restablecer</a>
+                        <a onclick="openRelayCenter()">📞 Centro de relevo</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-layout">
+        <div class="two-columns">
+            <div class="main-content">
+                <!-- Página Home -->
+                <div id="home" class="page active-page">
+                    <div class="carousel">
+                        <div class="carousel-inner" id="carouselInner">
+                            <div class="carousel-item"><img src="img\Inicio\carrucel\Carrusel 1.jpeg"" alt="Jóvenes estudiando"></div>
+                            <div class="carousel-item"><img src="img\Inicio\carrucel\Carrusel 2.jpeg" alt="Actividades deportivas"></div>
+                            <div class="carousel-item"><img src="img\Inicio\carrucel\Carrusel 3.jpeg" alt="Evento comunitario"></div>
+                            <div class="carousel-item"><img src="img\Inicio\carrucel\carrusel 4.jpg" alt="Voluntarios trabajando"></div>
+                        </div>
+                        <button class="carousel-control carousel-prev" onclick="prevSlide()">❮</button>
+                        <button class="carousel-control carousel-next" onclick="nextSlide()">❯</button>
+                    </div>
+
+                    <div class="tv-frame">
+                        <div class="tv-screen">
+                            <video id="welcomeVideo" poster="https://picsum.photos/id/10/800/400">
+                                <source src="video\Inicio\bienvenida.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="tv-controls">
+                            <button onclick="document.getElementById('welcomeVideo').play()">▶ Reproducir</button>
+                            <button onclick="document.getElementById('welcomeVideo').pause()">⏸ Pausar</button>
+                        </div>
+                    </div>
+
+                    <article>
+                        <h2>Bienvenidos a FUNJOVIR</h2>
+                        <img src="img\Inicio\mamá e hijo.jpeg" alt="Bienvenida" style="width:100%; margin:10px 0">
+                        <p>La Fundación FUNJOVIR es una organización sin ánimo de lucro dedicada a promover el desarrollo juvenil y la inclusión social en comunidades vulnerables de Bucaramanga. Desde nuestra creación, hemos trabajado incansablemente para brindar oportunidades de crecimiento y bienestar a jóvenes y familias.</p>
+                    </article>
+                </div>
+
+                <!-- Página Nosotros -->
+                <div id="nosotros" class="page">
+                    <article>
+                        <h2>Quiénes Somos</h2>
+                        <img src="img\Nosotros\nosotros 1.jpeg" alt="Equipo FUNJOVIR">
+                        <p>FUNJOVIR nació en 2015 como respuesta a las necesidades de jóvenes en situación de vulnerabilidad en la Comuna 1 Norte de Bucaramanga, especialmente en el barrio Villa Rosa. Hemos impactado positivamente a más de 50,000 personas a través de nuestros programas educativos, deportivos y de emprendimiento.</p>
+                        <h3>Nuestra Historia</h3>
+                        <p>Iniciamos con un grupo de 10 voluntarios que decidieron hacer la diferencia en su comunidad. Hoy somos más de 50 colaboradores y 200 voluntarios activos.</p>
+                        <h3>Misión</h3>
+                        <p>Transformar vidas a través de programas integrales que fomenten el desarrollo humano, la educación de calidad y la inclusión social.</p>
+                        <h3>Visión</h3>
+                        <p>Ser reconocidos en 2030 como la fundación líder en Latinoamérica en la generación de oportunidades para jóvenes.</p>
+                        <h3>Nuestros Valores</h3>
+                        <ul>
+                            <li><strong>Compromiso:</strong> Dedicación total a nuestra causa social.</li>
+                            <li><strong>Transparencia:</strong> Gestión clara y rendición de cuentas.</li>
+                            <li><strong>Inclusión:</strong> Espacios para todos sin discriminación.</li>
+                            <li><strong>Innovación:</strong> Buscamos nuevas formas de generar impacto.</li>
+                            <li><strong>Solidaridad:</strong> Trabajamos unidos por un mismo objetivo.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!-- Página Programas -->
+                <div id="programas" class="page">
+                    <article>
+                        <h2>Nuestros Programas</h2>
+                        <img src="img\Programas\deportes\deportes 1.jpeg" alt="Programas educativos">
+                        <h3>📚 Educación para el Futuro</h3>
+                        <img src="img\Programas\deportes\deportes 2.jpeg" alt="Programas educativos">
+                        <p>Programa de becas y refuerzo escolar para jóvenes en situación de vulnerabilidad. Incluye tutorías, materiales educativos y acompañamiento psicosocial. Más de 2,000 jóvenes beneficiados anualmente.</p>
+                        <h3>💼 Emprendimiento Juvenil</h3>
+                        <p>Capacitación en habilidades empresariales, talleres de innovación y acceso a microcréditos para que los jóvenes puedan crear sus propios emprendimientos. 150+ negocios creados.</p>
+                        <h3>⚽ Deporte y Recreación</h3>
+                        <p>Escuelas deportivas en fútbol, baloncesto y artes marciales que fomentan valores como el trabajo en equipo, la disciplina y la sana competencia.</p>
+                        <h3>💻 Inclusión Digital</h3>
+                        <p>Talleres de alfabetización digital, programación y robótica para cerrar la brecha tecnológica en comunidades marginadas.</p>
+                        
+                        <h3>📝 Formulario de Afiliación para Niños y Jóvenes</h3>
+                        <form id="affiliationForm">
+                            <div class="form-group"><label>Nombres completos:</label><input type="text" name="nombre" required></div>
+                            <div class="form-group"><label>Tipo de documento:</label><select name="tipoDoc"><option>CC</option><option>TI</option><option>RC</option></select></div>
+                            <div class="form-group"><label>Número de identificación:</label><input type="text" name="numDoc" required></div>
+                            <div class="form-group"><label>Edad:</label><input type="number" name="edad" required></div>
+                            <div class="form-group"><label>Dirección de residencia:</label><input type="text" name="direccion" required></div>
+                            <div class="form-group"><label>Nombre del padre:</label><input type="text" name="padre"></div>
+                            <div class="form-group"><label>Nombre de la madre:</label><input type="text" name="madre"></div>
+                            <div class="form-group"><label>Número de contacto:</label><input type="tel" name="contacto" required></div>
+                            <div class="form-group"><label>Correo electrónico:</label><input type="email" name="email" required></div>
+                            <div class="form-group"><label>Año de escolaridad:</label><input type="text" name="escolaridad"></div>
+                            <button type="submit">Enviar Afiliación</button>
+                        </form>
+                    </article>
+                </div>
+
+                <!-- Página Voluntariado -->
+                <div id="voluntariado" class="page">
+                    <article>
+                        <h2>Únete como Voluntario</h2>
+                        <img src="https://picsum.photos/id/91/600/300" alt="Voluntarios">
+                        <p>Ser voluntario en FUNJOVIR es una experiencia transformadora. Tu tiempo y talento pueden marcar la diferencia en la vida de muchos jóvenes.</p>
+                        <h3>✅ Requisitos</h3>
+                        <ul>
+                            <li>Ser mayor de 18 años</li>
+                            <li>Disponibilidad mínima de 4 horas semanales</li>
+                            <li>Actitud positiva y compromiso social</li>
+                        </ul>
+                        <h3>🌟 Áreas de Voluntariado</h3>
+                        <ul>
+                            <li>Acompañamiento educativo</li>
+                            <li>Talleres deportivos y recreativos</li>
+                            <li>Apoyo administrativo</li>
+                            <li>Gestión de redes sociales</li>
+                            <li>Eventos y campañas</li>
+                        </ul>
+                        <h3>📝 Formulario de Contacto</h3>
+                        <form id="contactForm">
+                            <div class="form-group"><label>Nombre:</label><input type="text" name="nombre" required></div>
+                            <div class="form-group"><label>Email:</label><input type="email" name="email" required></div>
+                            <div class="form-group"><label>Teléfono:</label><input type="tel" name="telefono"></div>
+                            <div class="form-group"><label>Mensaje:</label><textarea name="mensaje" rows="3"></textarea></div>
+                            <button type="submit">Enviar Mensaje</button>
+                        </form>
+                    </article>
+                </div>
+
+                <!-- Página Blog -->
+                <div id="blog" class="page">
+                    <article>
+                        <h2>Blog - Podcast</h2>
+                        <div class="tv-frame">
+                            <div class="tv-screen">
+                                <audio id="podcast" controls style="width:100%; height:50px">
+                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                        <img src="https://picsum.photos/id/96/600/300" alt="Podcast">
+                        <p>Escucha nuestro podcast semanal "Voces que Transforman", donde compartimos historias de éxito, entrevistas con beneficiarios y consejos para el desarrollo juvenil.</p>
+                        <h3>📖 Últimas Publicaciones</h3>
+                        <ul>
+                            <li><strong>María, 17 años:</strong> "Gracias al programa de becas de FUNJOVIR, pude terminar mis estudios y ahora estoy estudiando ingeniería de sistemas."</li>
+                            <li><strong>Nuevo Centro Comunitario:</strong> Inauguramos nuestro tercer centro comunitario en Villa Rosa.</li>
+                            <li><strong>Alianza Estratégica:</strong> Firmamos convenio con 10 empresas para ofrecer pasantías juveniles.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!-- Página Donaciones -->
+                <div id="donaciones" class="page">
+                    <article>
+                        <h2>Donaciones</h2>
+                        <h3>🎥 Testimonios en Video</h3>
+                        <div class="tv-frame">
+                            <div class="tv-screen">
+                                <video controls style="width:100%">
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <h3>🖼️ Galería de Imágenes</h3>
+                        <div class="gallery" id="gallery"></div>
+                        <h3>💳 Formulario de Donación</h3>
+                        <form id="donationForm">
+                            <div class="form-group"><label>Nombre del donante:</label><input type="text" name="nombre" required></div>
+                            <div class="form-group"><label>Email:</label><input type="email" name="email" required></div>
+                            <div class="form-group"><label>Monto a donar (COP):</label><input type="number" name="monto" required></div>
+                            <div class="form-group"><label>Número de cuenta: 291-000643-49 (Bancolombia)</label></div>
+                            <button type="submit">Pagar con PSE</button>
+                            <button type="button" onclick="generateCertificate()">Expedir Certificado</button>
+                        </form>
+                        <div class="testimonial">
+                            <p><strong>💬 "Gracias a sus donaciones, hemos podido ayudar a más de 1000 familias en 2025"</strong></p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Página ESAL -->
+                <div id="esal" class="page">
+                    <article>
+                        <h2>ESAL - Documentación DIAN</h2>
+                        <p>Documentos requeridos para calificación o actualización del régimen especial de tributación para entidades sin ánimo de lucro:</p>
+                        <div id="esalDocuments"></div>
+                    </article>
+                </div>
+
+                <!-- Contenedor para contenido administrativo dinámico -->
+                <div id="adminContent" class="page"></div>
+            </div>
+
+            <!-- Barra Lateral -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>📅 Calendario</h3>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <p id="currentMonthYear"></p>
+                        </div>
+                        <div id="calendarGrid" class="calendar-grid"></div>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3>⭐ Próximas Actividades</h3>
+                    <ul id="activityList"></ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>📍 Ubicación</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.5!2d-73.125!3d7.125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e680e0e0e0e0e0%3A0x0!2sCarrera%2019%20%2318N-31%2C%20Bucaramanga!5e0!3m2!1ses!2sco!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+                        <p><strong>Dirección:</strong> Carrera 19 # 18N-31 casa 2, manzana 37 barrio Villa Rosa, Bucaramanga-Colombia</p>
+                        <p><strong>Teléfono:</strong> +57 322 7327 309</p>
+                        <p><strong>Email:</strong> fundavir@gmail.com</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-toggle" onclick="toggleChat()">💬</div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <span>🤖 Asistente FUNJOVIR</span>
+            <button onclick="toggleChat()">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">¡Hola! Soy el asistente virtual de FUNJOVIR. ¿En qué puedo ayudarte?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Fundación FUNJOVIR</h4>
+                    <p>Transformando vidas desde 2015</p>
+                    <p>Carrera 19 # 18N-31 casa 2, manzana 37 barrio Villa Rosa</p>
+                    <p>Bucaramanga, Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📞 +57 322 7327 309</p>
+                    <p>✉️ fundavir@gmail.com</p>
+                    <p>🌐 www.funjovir.org</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" style="color:white;">📘</a>
+                        <a href="#" style="color:white;">📷</a>
+                        <a href="#" style="color:white;">🐦</a>
+                        <a href="#" style="color:white;">▶️</a>
+                        <a href="#" style="color:white;">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Política de Protección de Datos</h4>
+                    <p>Sus datos personales serán tratados de acuerdo con la Ley 1581 de 2012. FUNJOVIR garantiza la confidencialidad y seguridad de la información proporcionada.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fundación FUNJOVIR - Todos los derechos reservados | fundavir@gmail.com | +57 322 7327 309</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+>>>>>>> b6d5ee90b47db2dd4eb2a3c7eb6cabf48e6286c9
 </html>
