@@ -18,10 +18,47 @@
     <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV3P74JQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <script>
+// Define dataLayer and the gtag function.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Set default consent to 'denied' as a placeholder
+// Determine actual values based on your own requirements
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_pers<onaliza>t<ion': 'denied',>
+<  'analytics_storage': 'denied'
+});
+/script
+!-- Googl>e< tag (g>t<ag.js)> --
+script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"
+/script
+script
+  window.dataLayer = window.dataLayer || [];
+  f<unction> g<tag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+  g>t<ag(>9;config', 'TAG_ID');
+/script
+!-- Send consent updates when users interact with your consent banner --
+script
+  function allConsentGranted() {
+    gtag('consent', 'update', {
+      'ad_<user_da>t<a': 'granted',
+      'ad_personalization': 'grante>d<'>;,
+      <'ad_storage': 'granted&#>39;,
+     < 'a>nalytic<s_sto>rage': 'granted'
+    });
+  }
+/script
+!-- Invoke your consent function when a user interacts with your banner --
+body
+  ...
+  button onclick="allConsentGranted()"Accept all/button
+  ...
+/body
     <header>
         <div class="container header-content">
             <div class="logo">
